@@ -24,7 +24,7 @@ def post():
         f6 = float(request.form['f6'])
         inputs = [f1,f2,f3,f4,f5,f6]
         
-        model = pickle.load(open('C:\\Users\\user\\Downloads\\Chrome Downloads\\model.pkl','rb'))
+        model = pickle.load(open('model.pkl','rb'))
 
         predict = model.predict([inputs])
         
