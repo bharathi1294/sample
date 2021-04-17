@@ -3,6 +3,7 @@ from flask_cors import cross_origin
 import os
 import pickle
 import warnings
+import time
 warnings.filterwarnings("ignore")
 
 app = Flask(__name__)
@@ -23,7 +24,7 @@ def post():
         f5 = float(request.form['f5'])
         f6 = float(request.form['f6'])
         inputs = [f1,f2,f3,f4,f5,f6]
-        
+        time.sleep(3)
         model = pickle.load(open('model.pkl','rb'))
 
         predict = model.predict([inputs])
